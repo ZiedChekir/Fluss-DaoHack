@@ -595,7 +595,8 @@ function StopFlow(){
         const signer = provider.getSigner();
         const contract = new ethers.Contract(StreamFundAdress,ABI,signer)
         const tokenID = 0;
-        const tx = await contract.burnNFT(tokenID);
+        const flowRate = "10000"
+        const tx = await contract.editNFT(tokenID,flowRate);
         await tx.wait()  
 }
 

@@ -13,36 +13,36 @@ import { EVMcrispr, evmcl } from '@1hive/evmcrispr';
 
 
 
-async function aragon() {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = await provider.getSigner();
-   // const daoAddress = "0x2ec24463ed9BC8122F2b19b313AD8F8d0E99CBB7";
-    const daoAddress = "daohacka.aragonid.eth";
-    const evmcrispr = await EVMcrispr.create(daoAddress,signer );
+// async function aragon() {
+//     const provider = new ethers.providers.Web3Provider(window.ethereum);
+//     const signer = await provider.getSigner();
+//    // const daoAddress = "0x2ec24463ed9BC8122F2b19b313AD8F8d0E99CBB7";
+//     const daoAddress = "daohacka.aragonid.eth";
+//     const evmcrispr = await EVMcrispr.create(daoAddress,signer );
 
-    const txReceipt = await evmcrispr.forward(
-        commonsUpgradeActionFns,
-        ["disputable-voting.open"],
-        { context: "Commons Upgrade" }
-      );
-}
+//     const txReceipt = await evmcrispr.forward(
+//         commonsUpgradeActionFns,
+//         ["disputable-voting.open"],
+//         { context: "Commons Upgrade" }
+//       );
+// }
 
-async function test(){
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
+// async function test(){
+//     const provider = new ethers.providers.Web3Provider(window.ethereum);
+//     const signer = provider.getSigner();
 
-    const sf = await Framework.create({
-        // chainId: "42",//Number(chainId),
-        networkName: "kovan",
+//     const sf = await Framework.create({
+//         // chainId: "42",//Number(chainId),
+//         networkName: "kovan",
 
-        provider: provider
-    });
-    const ethx = "0xdd5462a7db7856c9128bc77bd65c2919ee23c6e1"
-    console.log(" host is "+ sf.settings.config.hostAddress)
-    console.log("cfa adress "+ sf.settings.config.cfaV1Address);
+//         provider: provider
+//     });
+//     const ethx = "0xdd5462a7db7856c9128bc77bd65c2919ee23c6e1"
+//     console.log(" host is "+ sf.settings.config.hostAddress)
+//     console.log("cfa adress "+ sf.settings.config.cfaV1Address);
     
 
-}
+// }
 
 
 
@@ -802,6 +802,8 @@ export const CreateFlow = () => {
             <Button variant="success" className="button" {...props}>
                 {isButtonLoading ? <Spinner animation="border" /> : children}
             </Button>
+
+            
         );
     }
 
