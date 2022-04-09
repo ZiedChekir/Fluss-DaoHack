@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { ethers } from "ethers";
 
-
+function clickme(){alert('you clicked me');}
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -118,7 +118,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>Connect Metamask</Button>}
+          {button && <Button onClick={clickme} buttonStyle='btn--outline'>Connect Metamask</Button>}
         </div>
       </nav>
     </>
