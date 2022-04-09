@@ -42,7 +42,7 @@ function Cards() {
               src='/images/peepohands.jpeg'
               text='RobinMania'
               label= {object}
-              path='/services'
+              path='/show_proj/'
             />;
           })
           }
@@ -50,37 +50,43 @@ function Cards() {
               src='/images/peeposhy.jpg'
               text='A shy peepo'
               label='cute'
-              path='/services'
+              path="/show_proj/"
+              id='1'
+            />
+             <CardItem
+              src='/images/peeposhy.jpg'
+              text='A shy peepo'
+              label='cute'
+              path='/show_proj/'
+              id='2'
             />
              <CardItem
               src='/images/peeposhy.jpg'
               text='A shy peepo'
               label='cute'
               path='/services'
+              id='3'
             />
              <CardItem
               src='/images/peeposhy.jpg'
               text='A shy peepo'
               label='cute'
               path='/services'
+              id='4'
             />
              <CardItem
               src='/images/peeposhy.jpg'
               text='A shy peepo'
               label='cute'
               path='/services'
+              id='5'
             />
              <CardItem
               src='/images/peeposhy.jpg'
               text='A shy peepo'
               label='cute'
               path='/services'
-            />
-             <CardItem
-              src='/images/peeposhy.jpg'
-              text='A shy peepo'
-              label='cute'
-              path='/services'
+              id='6'
             />
           </ul>
         
