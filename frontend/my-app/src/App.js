@@ -4,7 +4,7 @@ import { CreateFlow } from "./components/CreateFlow";
 
 function App() {
   return (
-    <div className="App">
+    <div  className="App">
     <CreateFlow />
   </div>
   );
