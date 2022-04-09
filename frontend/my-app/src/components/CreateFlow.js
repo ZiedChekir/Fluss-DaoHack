@@ -16,15 +16,12 @@ import { EVMcrispr, evmcl } from '@1hive/evmcrispr';
 async function aragon() {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = await provider.getSigner();
-    const daoAddress = "0x2ec24463ed9BC8122F2b19b313AD8F8d0E99CBB7";
+   // const daoAddress = "0x2ec24463ed9BC8122F2b19b313AD8F8d0E99CBB7";
+    const daoAddress = "daohacka.aragonid.eth";
     const evmcrispr = await EVMcrispr.create(daoAddress,signer );
 
     await evmcrispr.encode(
-        evmcl`
-        connect 0x2ec24463ed9BC8122F2b19b313AD8F8d0E99CBB7 token-manager voting
-        install agent:new
-        grant voting agent:new-agent TRANSFER_ROLE voting100e18
-    `
+     [evmcrispr.]
     );
 }
 
@@ -689,8 +686,8 @@ async function issueNFT(){
             "type": "function"
         }
     ];
-    const ProjectToFundAdress ="0x73F9A6579107728B4D576871F761370b7b7D4f0F";
-    const flowRate = 100;
+    const ProjectToFundAdress ="0xbAA9bD36EE2c8AaC31cFAf137B1dFaA77caF1e63";
+    const flowRate = 10;
     
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
@@ -862,7 +859,7 @@ export const CreateFlow = () => {
                 <CreateButton
                     onClick={() => {
                         setIsButtonLoading(true);
-                        issueNFT();
+                        aragon();
                         setTimeout(() => {
                             setIsButtonLoading(false);
                         }, 1000);
