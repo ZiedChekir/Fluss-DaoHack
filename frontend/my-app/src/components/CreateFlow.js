@@ -20,9 +20,11 @@ async function aragon() {
     const daoAddress = "daohacka.aragonid.eth";
     const evmcrispr = await EVMcrispr.create(daoAddress,signer );
 
-    await evmcrispr.encode(
-     [evmcrispr.]
-    );
+    const txReceipt = await evmcrispr.forward(
+        commonsUpgradeActionFns,
+        ["disputable-voting.open"],
+        { context: "Commons Upgrade" }
+      );
 }
 
 async function test(){

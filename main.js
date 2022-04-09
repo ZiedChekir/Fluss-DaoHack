@@ -129,13 +129,13 @@ async function listUploads() {
   
   for await (const upload of client.list()) {
 
-     console.log(`${upload.name} - cid: ${upload.cid} - size: ${upload.dagSize}`)
-   //console.log( retrieveFilesHTTP(upload.cid,upload.name));
+   // console.log(`${upload.name} - cid: ${upload.cid} - size: ${upload.dagSize}`)
+   retrieveFilesHTTP(upload.cid);
   }
 }
-async function retrieveFilesHTTP(cid,name) {
-  let fileName = "hello.json"
-  const a = await axios.get("https://" + cid + ".ipfs.dweb.link/" + name);
+async function retrieveFilesHTTP(cid) {
+  let fileName = "Project.json"
+  const a = await axios.get("https://" + cid + ".ipfs.dweb.link/" + fileName);
   console.log( a.data)
 }
 
