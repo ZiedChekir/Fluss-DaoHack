@@ -1,11 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function CardItem(props) {
+  const navigate=useNavigate();
+  const toProject=()=>{
+    navigate('/Project',{state:{id:1,name:'test'}});
+  }
   return (
     <>
       <li className='cards__item'>
-        <Link className='cards__item__link' to={{pathname: props.path + props.id, state:{id:props.id, name : 'test'} }}>
+        <Link className='cards__item__link' to={props.path+props.id}>
           <figure className='cards__item__pic-wrap' data-category={props.label}>
             <img
               className='cards__item__img'

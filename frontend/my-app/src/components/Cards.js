@@ -57,7 +57,7 @@ function Cards() {
               src='/images/peeposhy.jpg'
               text='A shy peepo'
               label='cute'
-              path='/show_proj/'
+              path='/Project/'
               id='2'
             />
              <CardItem
